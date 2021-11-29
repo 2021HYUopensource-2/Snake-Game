@@ -196,6 +196,7 @@ def main():
 		headPos = s.head.pos
 		if headPos[0] >= 20 or headPos[0] < 0 or headPos[1] >= 20 or headPos[1] < 0:
 			print("Score:", len(s.body))
+			message_box('You Lost!', 'Play again')
 			s.reset((10, 10))
 
 		if s.body[0].pos == snack.pos:
