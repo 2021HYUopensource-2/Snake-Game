@@ -183,8 +183,7 @@ def message_box(subject, content):
 def main():
 	global s, snack, win
 	win = pygame.display.set_mode((width,height))
-	s = snake((255,0,0), (20,20)) #snake length = 1#
-	s.addCube()
+	s = snake((255,0,0), (10,10)) #snake length = 1#
 	snack = cube(randomSnack(rows,s), color=(0,255,0))
 	flag = True
 	clock = pygame.time.Clock()
