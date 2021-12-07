@@ -11,14 +11,13 @@ pygame.mixer.music.load('bubble.mp3')
 pygame.mixer.music.play(-1)
 pygame.mixer.music.set_volume(1.0)
 
-width = 500
-height = 500
-
-cols = 25
-rows = 20
-
 difficulty = int(input("난이도를 입력해주세요.(Easy : 1, Normal : 2, Hard : 3) : "))
 
+width = (6 - difficulty) * 100 #500=1 400=2 300=3
+height = (6 - difficulty) * 100 #500=1 400=2 300=3
+
+cols = (6 - difficulty) * 4 #20=1 16=2 12=3
+rows = (6 - difficulty) * 4 #20=1 16=2 12=3
 
 class cube():
     rows = 20
