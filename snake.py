@@ -13,6 +13,13 @@ pygame.mixer.music.set_volume(1.0)
 
 difficulty = int(input("난이도를 입력해주세요.(Easy : 1, Normal : 2, Hard : 3) : "))
 
+if (difficulty == 1):
+    fail_row_col = 20
+if (difficulty == 2):
+    fail_row_col = 16
+if (difficulty == 3):
+    fail_row_col = 12
+
 width = (6 - difficulty) * 100 #500=1 400=2 300=3
 height = (6 - difficulty) * 100 #500=1 400=2 300=3
 
@@ -194,7 +201,7 @@ def main():
         clock.tick(difficulty*5)
         s.move()
         headPos = s.head.pos
-        if headPos[0] >= 20 or headPos[0] < 0 or headPos[1] >= 20 or headPos[1] < 0:
+        if headPos[0] >= fail_row_col or headPos[0] < 0 or headPos[1] >= fail_row_col or headPos[1] < 0:
             print("Score:", len(s.body))
             message_box('You Lost!', 'Play again')
             s.reset((10, 10))
